@@ -1,0 +1,32 @@
+.dropdownBox {
+	border-bottom: 1px solid rgb(200,200,200);
+	width: 180px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.dropdown {
+	
+	position: absolute;
+	width: 180px;
+	background: white;
+	z-index: 20;
+}
+
+.dropdownItem {
+	border-bottom: 1px solid rgb(200,200,200);
+	cursor: pointer;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.dropdownItem:hover {
+	background: rgb(248,248,248);
+}
+.placeholder {
+	opacity: 0.5;
+}

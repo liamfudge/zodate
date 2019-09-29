@@ -1,0 +1,22 @@
+.navBar {
+	border: 1px solid;
+	height: 40px;
+	background: black;
+	color: white;
+	display: flex;
+}
+
+.navItemBox {
+	width: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+.navItemBox:hover {
+	opacity: 0.6;
+}
+.navIcon {
+	height: 18px;
+	
+}

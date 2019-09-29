@@ -1,0 +1,36 @@
+.matchUserView {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background: white;
+	border-bottom: 1px solid rgb(220,220,220);
+	cursor: pointer;
+}
+.matchUsermessageMini {
+	padding-top: 6px;
+	font-size: 12px;
+	color: rgb(180,180,180);
+}
+.matchesHeading {
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: white;
+	border-bottom: 1px solid rgb(220,220,220);
+/*	cursor: pointer;*/
+}
+.backArrow {
+	width: 16px;
+	transform: rotateZ(90deg);
+	cursor: pointer;
+	opacity: 0.4;
+}
+
+.ppicClassMini2 {
+	height: 26px;
+	border-radius: 50%;
+	box-shadow: 0px 0px 5px rgba(100,100,100,0.1);
+	margin: 10px;
+}
