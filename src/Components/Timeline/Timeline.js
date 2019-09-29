@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Users from '../Data/Users';
-import InstagramFeed from './InstagramFeed';
+// import InstagramFeed from './InstagramFeed';
 
 import PPic from '../../Images/profilepic.png';
 import heart from '../../Images/heart.jpg';
@@ -9,7 +9,7 @@ import close from '../../Images/close.png';
 import randomPic from '../../Images/randomPic.jpg';
 
 import { connect } from 'react-redux';
-import { likedUsers } from '../../Actions/Actions';
+import { likedUsers, currentProfile } from '../../Actions/Actions';
 
 import './TimelineStyle.css';
 
@@ -20,6 +20,13 @@ class Timeline extends React.Component{
 			count: 0,
 			lovedUser: [],
 			message: false,
+		}
+	}
+	componentDidMount(){
+		// console.log(this.props.currentProfileResponse);
+		if(this.props.currentProfileResponse !== 0){
+			this.setState({count: this.props.currentProfileResponse});
+			this.props.currentProfile(0);
 		}
 	}
 	next = () => {
@@ -118,9 +125,10 @@ class Timeline extends React.Component{
 
 const mapStateToProps = state => ({
 	likedUsersResponse: state.redux.likedUsers,
+	currentProfileResponse: state.redux.currentProfile,
 })
 
-export default connect(mapStateToProps, { likedUsers })(Timeline);
+export default connect(mapStateToProps, { likedUsers, currentProfile })(Timeline);
 
 
 

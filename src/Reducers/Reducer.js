@@ -1,9 +1,10 @@
-import { REGISTERED_USER, LIKED_USERS, NAV } from '../Actions/Types';
+import { REGISTERED_USER, LIKED_USERS, NAV, CURRENT_PROFILE } from '../Actions/Types';
 
 const initialState = {
 	registeredUser: 'empty',
 	likedUsers: [],
 	nav: 'home',
+	currentProfile: 0,
 }
 
 export default function(state = initialState, action) {
@@ -22,6 +23,11 @@ export default function(state = initialState, action) {
 			return {
 				...state,
 				nav: action.payload
+			}
+		case CURRENT_PROFILE:
+			return {
+				...state,
+				currentProfile: action.payload
 			}
 		default:
 			return state;
